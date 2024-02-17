@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<body>
+    <h1>Result Page</h1>
+    
+    <p>You chose {{ option }}.</p>
+
+    <form action="/submit_table" method="post">
+        <table>
+            <tr>
+                <th>Row 1, Column 1</th>
+                <th>Row 1, Column 2</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="row1_col1" required></td>
+                <td><input type="text" name="row1_col2" required></td>
+            </tr>
+            <tr>
+                <th>Row 2, Column 1</th>
+                <th>Row 2, Column 2</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="row2_col1" required></td>
+                <td><input type="text" name="row2_col2" required></td>
+            </tr>
+        </table>
+
+        <button type="submit">Submit Table</button>
+    </form>
+</body>
+</html>

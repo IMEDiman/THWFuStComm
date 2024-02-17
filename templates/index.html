@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THW FuehrungsStelle</title>
+</head>
+<body>
+    <h1>THW FuehrungsStelle</h1>
+    
+    <form action="/login" method="post">
+        <label for="user_sign">Zeichen (ABc):</label>
+        <input type="text" id="user_sign" name="user_sign" required>
+        <label for="user_pw">Passwort:</label>
+        <input type="text" id="user_pw" name="user_pw" required>
+        <label for="user_role">Rolle:</label>
+        <select id="user_role" name="user_role" required>
+            <option value="Funker">Funker</option>
+            <option value="LdF">LdF</option>
+            <option value="Sichter">Sichter</option>
+            <option value="S1">S1</option>
+        </select>
+
+        <button type="login">Login</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+</body>
+</html>
