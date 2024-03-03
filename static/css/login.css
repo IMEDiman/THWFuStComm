@@ -1,0 +1,41 @@
+#loginbox{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: auto;
+    text-align: left;
+    border: 3px solid black;
+    padding: 1em;
+}
+
+.loginrow{
+    padding: 1em;
+    width: 95%;
+}
+
+.loginrowright{
+    padding: 1em;
+    width: 95%;
+    text-align: right;
+}
+
+.loginbox{
+    text-align: left;
+    width: 50%;
+}
+
+.loginlabel{
+    text-align: left
+}
+
+#messagebox{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: auto;
+    text-align: center;
+    border: 3px solid red;
+    padding: 1em;
+}

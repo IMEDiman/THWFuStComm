@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Keywords" content="THW, F&uuml;hrungsstelle, Meldungen" />
+    <meta name="Description" content="THW F&uuml;hrungsstellen Software für das verfolgen von Meldungen" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script> -->
+    <title>THW F&uuml;hrungsstelle</title>
+</head>
+<body>
+    {% if message %}
+    <div id="errorbox">
+        <p>{{ message }}</p>
+    </div>
+    {% endif %}
+
+</body>
+</html>

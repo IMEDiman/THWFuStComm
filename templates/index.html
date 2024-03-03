@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THW FuehrungsStelle</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Keywords" content="THW, F&uuml;hrungsstelle, Meldungen" />
+    <meta name="Description" content="THW F&uuml;hrungsstellen Software für das verfolgen von Meldungen" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script> -->
+    <title>THW F&uuml;hrungsstelle</title>
 </head>
 <body>
-    <h1>THW FuehrungsStelle</h1>
-    
-    <form action="/login" method="post">
-        <label for="user_sign">Zeichen (ABc):</label>
-        <input type="text" id="user_sign" name="user_sign" required>
-        <label for="user_pw">Passwort:</label>
-        <input type="text" id="user_pw" name="user_pw" required>
-        <label for="user_role">Rolle:</label>
-        <select id="user_role" name="user_role" required>
-            <option value="Funker">Funker</option>
-            <option value="LdF">LdF</option>
-            <option value="Sichter">Sichter</option>
-            <option value="S1">S1</option>
-        </select>
-
-        <button type="login">Login</button>
-    </form>
+    <div id="loginbox">
+        <h1>THW F&uuml;hrungsstelle</h1>
+        <div class="loginrow">
+            <h2>Login:</h2>
+            <form action="/login" method="post">
+                <div class="loginrowright">
+                    <label for="user_sign" class="loginlabel">Zeichen (ABc):</label>
+                    <input type="text" id="user_sign" name="usersign" class="loginbox" required />
+                </div>
+                <div class="loginrowright">
+                    <label for="user_pw" class="loginlabel">Passwort:</label>
+                    <input type="password" id="user_pw" name="userpw" class="loginbox" required />
+                </div>
+                <div class="loginrowright">
+                    <button type="login" class="loginlabel">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     {% if message %}
+    <div id="messagebox">
         <p>{{ message }}</p>
+    </div>
     {% endif %}
 
 </body>
